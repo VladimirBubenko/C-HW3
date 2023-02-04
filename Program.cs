@@ -26,24 +26,41 @@
 
 // Задача 21
 // Напишите программу, которая принимает на вход координаты двух точек и находит расстояние между ними в 3D пространстве.
-double result(double xA, double yA, double zA, double xB, double yB, double zB)
+// double result(double xA, double yA, double zA, double xB, double yB, double zB)
+// {
+//     double lenth = Math.Sqrt(Math.Pow((xB-xA),2) + Math.Pow((yB-yA),2) + Math.Pow((zB-zA),2));
+//     return lenth;
+// }
+// Console.Write("Input xA ");
+// double xA = Convert.ToDouble(Console.ReadLine());
+// Console.Write("Input yA ");
+// double yA = Convert.ToDouble(Console.ReadLine());
+// Console.Write("Input zA ");
+// double zA = Convert.ToDouble(Console.ReadLine());
+// Console.Write("Input xB: ");
+// double xB = Convert.ToDouble(Console.ReadLine());
+// Console.Write("Input yB: ");
+// double yB = Convert.ToDouble(Console.ReadLine());
+// Console.Write("Input zB ");
+// double zB = Convert.ToDouble(Console.ReadLine());
+// Console.WriteLine(Math.Round(result(xA,yA,zA,xB,yB,zB),2));
+
+// Задача 23
+// Напишите программу, которая принимает на вход число (N) и выдаёт таблицу кубов чисел от 1 до N.
+void ShowN (int num)
 {
-    double lenth = Math.Sqrt(Math.Pow((xB-xA),2) + Math.Pow((yB-yA),2) + Math.Pow((zB-zA),2));
-    return lenth;
+    int current = 1;
+    if (num <= 0) Console.Write("Error");
+    else 
+    {
+        while (current <= num)
+        {
+            Console.WriteLine(Math.Pow(current,3) + " ");
+            current++;
+        }
+    }
 }
-Console.Write("Input xA ");
-double xA = Convert.ToDouble(Console.ReadLine());
-Console.Write("Input yA ");
-double yA = Convert.ToDouble(Console.ReadLine());
-Console.Write("Input zA ");
-double zA = Convert.ToDouble(Console.ReadLine());
-Console.Write("Input xB: ");
-double xB = Convert.ToDouble(Console.ReadLine());
-Console.Write("Input yB: ");
-double yB = Convert.ToDouble(Console.ReadLine());
-Console.Write("Input zB ");
-double zB = Convert.ToDouble(Console.ReadLine());
-Console.WriteLine(Math.Round(result(xA,yA,zA,xB,yB,zB),2));
-
-
+Console.Write("Input a number: ");
+int num = Convert.ToInt32(Console.ReadLine());
+ShowN(num);
 
